@@ -49,7 +49,15 @@ npm run build          # type-check + production build
 npm run install:vault  # build, then copy main.js/manifest.json/styles.css into the vault
 ```
 
-`scripts/install-vault.mjs` copies into a hard-coded default vault; pass a different vault path as the first argument. Files are copied rather than junction-linked so cloud-synced vaults don't pick up `node_modules`.
+`scripts/install-vault.mjs` needs to know where your vault is. Pass the path as the first argument, or set the `OBSIDIAN_VAULT` environment variable:
+
+```bash
+npm run install:vault -- "/path/to/Your Vault"
+# or
+OBSIDIAN_VAULT="/path/to/Your Vault" npm run install:vault
+```
+
+The target must contain a `.obsidian` folder. Files are copied rather than junction-linked so cloud-synced vaults don't pick up `node_modules`.
 
 Smoke-test the pure JSON-parsing logic without Obsidian:
 

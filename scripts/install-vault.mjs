@@ -4,10 +4,13 @@
 import { copyFileSync, existsSync, mkdirSync } from "fs";
 import { join } from "path";
 
-const DEFAULT_VAULT =
-	"C:\\Users\\Thous\\Desktop\\Obsidian Notes";
-
-const vault = process.argv[2] ?? DEFAULT_VAULT;
+const vault = process.argv[2] ?? process.env.OBSIDIAN_VAULT;
+if (!vault) {
+	console.error(
+		'Usage: node scripts/install-vault.mjs <vault-path>   (or set OBSIDIAN_VAULT)'
+	);
+	process.exit(1);
+}
 if (!existsSync(join(vault, ".obsidian"))) {
 	console.error(`Not an Obsidian vault (no .obsidian folder): ${vault}`);
 	process.exit(1);

@@ -28,11 +28,11 @@ export interface IdeaTriageSettings {
 }
 
 export const DEFAULT_SETTINGS: IdeaTriageSettings = {
-	llmBaseUrl: "http://localhost:8000/v1",
-	llmModel: "gemma 4",
+	llmBaseUrl: "http://localhost:11434/v1",
+	llmModel: "",
 	llmApiKey: "",
 	chatTemperature: 0.4,
-	repo: "Sonar-Arts/Stonebreak",
+	repo: "",
 	ghPath: "gh",
 	maxIssues: 100,
 	chunkChars: 12000,
