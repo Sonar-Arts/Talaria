@@ -1,4 +1,4 @@
-# Idea Triage
+# Talaria
 
 An Obsidian plugin that turns the ideas buried in your notes into GitHub issues — with a local LLM doing the reading and you keeping the final say on every change.
 
