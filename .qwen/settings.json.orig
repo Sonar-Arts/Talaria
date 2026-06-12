@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "computer_use__list_apps"
-    ]
-  },
-  "$version": 4
-}

@@ -24,11 +24,11 @@ for (const f of files) {
 	}
 }
 
-const dest = join(vault, ".obsidian", "plugins", "idea-triage");
+const dest = join(vault, ".obsidian", "plugins", "talaria");
 mkdirSync(dest, { recursive: true });
 for (const f of files) {
 	copyFileSync(f, join(dest, f));
 	console.log(`copied ${f} -> ${join(dest, f)}`);
 }
-console.log("\nDone. In Obsidian: Settings -> Community plugins -> enable \"Idea Triage\".");
+console.log("\nDone. In Obsidian: Settings -> Community plugins -> enable \"Talaria\".");
 console.log("(If the plugin was already enabled, reload Obsidian with Ctrl+R.)");
