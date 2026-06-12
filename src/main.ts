@@ -28,7 +28,7 @@ export default class IdeaTriagePlugin extends Plugin {
 		// Any proposal change (approve, edit, chat revision, apply) persists the session.
 		this.registerEvent(this.session.store.on("changed", () => this.persistSession()));
 
-		this.addRibbonIcon("list-checks", "Idea Triage: Analyze notes", () => this.startAnalysis());
+		this.addRibbonIcon("list-checks", "Analyze notes", () => this.startAnalysis());
 
 		this.addCommand({
 			id: "analyze-notes",
@@ -58,7 +58,7 @@ export default class IdeaTriagePlugin extends Plugin {
 			try {
 				this.session.restore(data.session);
 			} catch (e) {
-				console.error("Idea Triage: could not restore the saved session", e);
+				console.error("Talaria: could not restore the saved session", e);
 			}
 		}
 	}
@@ -85,11 +85,11 @@ export default class IdeaTriagePlugin extends Plugin {
 
 	private checkConfigured(): boolean {
 		if (!this.settings.llmModel) {
-			new Notice("Set the LLM model name in the Idea Triage settings first.");
+			new Notice("Set the LLM model name in the Talaria settings first.");
 			return false;
 		}
 		if (!/^[\w.-]+\/[\w.-]+$/.test(this.settings.repo)) {
-			new Notice("Set the GitHub repository (owner/repo) in the Idea Triage settings first.");
+			new Notice("Set the GitHub repository (owner/repo) in the Talaria settings first.");
 			return false;
 		}
 		return true;

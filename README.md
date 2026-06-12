@@ -15,10 +15,16 @@ An Obsidian plugin that turns the ideas buried in your notes into GitHub issues 
 
   A capable instruct model (e.g. `qwen2.5:7b-instruct` or better) is recommended; the plugin's JSON parsing is forgiving, but very small models struggle with the matching step.
 
+## Installation
+
+- **Community store** (once accepted): in Obsidian, open **Settings → Community plugins → Browse**, search for **Talaria**, install, and enable it.
+- **Beta via BRAT:** install the [BRAT](https://github.com/TfTHacker/obsidian42-brat) plugin, then *Add beta plugin* with the repo `Sonar-Arts/Talaria` to track releases before it lands in the store.
+- **Manual / from source:** see **Development** below to build and copy the files into your vault.
+
 ## Setup
 
-1. Install the plugin (see **Development** below) and enable it under **Settings → Community plugins**.
-2. Open **Settings → Idea Triage**:
+1. Install and enable the plugin (see **Installation** above), then enable it under **Settings → Community plugins**.
+2. Open **Settings → Talaria**:
    - **Base URL / Model / API key** — point at your local server. Press **Test** to verify the connection.
    - **Repository** — `owner/repo` to triage against, or press **Pick** to choose from your repos.
    - **gh executable** — leave as `gh` if it is on your PATH.
@@ -27,7 +33,7 @@ An Obsidian plugin that turns the ideas buried in your notes into GitHub issues 
 
 ## Usage
 
-1. Run **Idea Triage: Analyze notes** (ribbon icon or command palette).
+1. Run **Talaria: Analyze notes** (ribbon icon or command palette).
 2. Pick notes and/or folders in the searchable multi-select picker.
 3. The triage panel opens in the right sidebar:
    - **Proposal cards** show the action kind, content, and the model's rationale. Approve with the checkbox, expand to edit the title/body inline, or reject.

@@ -34,7 +34,7 @@ export class TriageView extends ItemView {
 	}
 
 	getDisplayText(): string {
-		return "Idea triage";
+		return "Talaria";
 	}
 
 	getIcon(): string {
@@ -114,7 +114,7 @@ export class TriageView extends ItemView {
 				text:
 					this.session.ideas.length > 0
 						? "No proposals — the model found nothing to change."
-						: 'No session yet. Run "Idea Triage: Analyze notes" to start.',
+						: 'No session yet. Run "Analyze notes" to start.',
 				cls: "idea-triage-empty",
 			});
 		}

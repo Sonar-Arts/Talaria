@@ -1,9 +1,10 @@
 {
-	"id": "idea-triage",
-	"name": "Idea Triage",
+	"id": "talaria",
+	"name": "Talaria",
 	"version": "0.1.0",
 	"minAppVersion": "1.5.0",
 	"description": "Send selected notes to a local LLM, categorize ideas, compare them with GitHub issues (via gh CLI), and create/edit issues with your approval.",
 	"author": "Sonar-Arts",
+	"authorUrl": "https://github.com/Sonar-Arts",
 	"isDesktopOnly": true
 }
