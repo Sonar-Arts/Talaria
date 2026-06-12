@@ -1,0 +1,249 @@
+/* ===== Note picker modal ===== */
+.idea-triage-picker .idea-triage-picker-search {
+	width: 100%;
+	margin-bottom: 8px;
+}
+.idea-triage-picker-list {
+	max-height: 50vh;
+	overflow-y: auto;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	padding: 4px;
+}
+.idea-triage-picker-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 3px 6px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: var(--font-ui-small);
+}
+.idea-triage-picker-row:hover {
+	background: var(--background-modifier-hover);
+}
+.idea-triage-picker-folder {
+	font-weight: 600;
+}
+.idea-triage-picker-footer {
+	margin-top: 8px;
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+.idea-triage-picker-footer.idea-triage-picker-warn {
+	color: var(--text-warning);
+}
+.idea-triage-picker-buttons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-top: 12px;
+}
+.idea-triage-picker-more {
+	color: var(--text-muted);
+	padding: 6px;
+	font-style: italic;
+}
+
+/* ===== Triage view layout ===== */
+.idea-triage-view {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	gap: 6px;
+}
+.idea-triage-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+.idea-triage-repo {
+	font-weight: 600;
+	margin-right: auto;
+	font-size: var(--font-ui-small);
+}
+.idea-triage-status {
+	min-height: 0;
+	color: var(--text-accent);
+	font-size: var(--font-ui-small);
+}
+.idea-triage-status-active {
+	padding: 2px 0;
+}
+.idea-triage-proposals {
+	flex: 1 1 50%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	min-height: 100px;
+}
+.idea-triage-empty {
+	color: var(--text-muted);
+	font-style: italic;
+	padding: 12px;
+}
+
+/* ===== Proposal cards ===== */
+.idea-triage-card {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 8px;
+	padding: 8px;
+	font-size: var(--font-ui-small);
+}
+.idea-triage-card-approved {
+	border-color: var(--color-green);
+}
+.idea-triage-card-rejected {
+	opacity: 0.55;
+}
+.idea-triage-card-applied {
+	border-color: var(--color-green);
+	background: color-mix(in srgb, var(--color-green) 8%, transparent);
+}
+.idea-triage-card-failed {
+	border-color: var(--color-red);
+}
+.idea-triage-card-header {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: wrap;
+}
+.idea-triage-card-id {
+	color: var(--text-muted);
+	font-family: var(--font-monospace);
+}
+.idea-triage-card-title {
+	font-weight: 600;
+}
+.idea-triage-card-badges {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	margin-left: auto;
+}
+.idea-triage-badge {
+	border-radius: 10px;
+	padding: 1px 8px;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	background: var(--background-modifier-border);
+}
+.idea-triage-badge-create_issue { background: color-mix(in srgb, var(--color-green) 25%, transparent); }
+.idea-triage-badge-edit_issue { background: color-mix(in srgb, var(--color-orange) 25%, transparent); }
+.idea-triage-badge-comment { background: color-mix(in srgb, var(--color-blue) 25%, transparent); }
+.idea-triage-badge-set_labels { background: color-mix(in srgb, var(--color-purple) 25%, transparent); }
+.idea-triage-badge-applied { background: color-mix(in srgb, var(--color-green) 35%, transparent); }
+.idea-triage-badge-failed { background: color-mix(in srgb, var(--color-red) 35%, transparent); }
+.idea-triage-badge-revised { background: color-mix(in srgb, var(--color-yellow) 35%, transparent); }
+.idea-triage-badge-removed { background: color-mix(in srgb, var(--color-red) 20%, transparent); }
+.idea-triage-badge-edit_note { background: color-mix(in srgb, var(--color-cyan) 25%, transparent); }
+.idea-triage-badge-reverted { background: color-mix(in srgb, var(--color-orange) 25%, transparent); }
+.idea-triage-diff {
+	margin: 4px 0 0;
+}
+.idea-triage-diff-del { background: color-mix(in srgb, var(--color-red) 15%, transparent); }
+.idea-triage-diff-add { background: color-mix(in srgb, var(--color-green) 15%, transparent); }
+.idea-triage-diff-missing { color: var(--color-red); }
+.idea-triage-card-meta {
+	color: var(--text-muted);
+	margin-top: 4px;
+}
+.idea-triage-card-text pre {
+	white-space: pre-wrap;
+	word-break: break-word;
+	background: var(--background-secondary);
+	padding: 6px;
+	border-radius: 4px;
+	margin: 4px 0;
+	max-height: 240px;
+	overflow-y: auto;
+}
+.idea-triage-card-rationale {
+	color: var(--text-muted);
+	margin-top: 4px;
+}
+.idea-triage-mini-btn {
+	font-size: var(--font-ui-smaller);
+	padding: 1px 8px;
+	height: auto;
+}
+.idea-triage-edit-field {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin-top: 6px;
+}
+.idea-triage-edit-field label {
+	font-size: var(--font-ui-smaller);
+	color: var(--text-muted);
+}
+.idea-triage-edit-field textarea,
+.idea-triage-edit-field input {
+	width: 100%;
+	font-family: var(--font-monospace);
+	font-size: var(--font-ui-small);
+}
+
+/* ===== Chat ===== */
+.idea-triage-chat {
+	flex: 1 1 40%;
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid var(--background-modifier-border);
+	padding-top: 6px;
+	min-height: 140px;
+}
+.idea-triage-chat-log {
+	flex: 1;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding-bottom: 6px;
+}
+.idea-triage-bubble {
+	border-radius: 10px;
+	padding: 6px 10px;
+	max-width: 92%;
+	white-space: pre-wrap;
+	word-break: break-word;
+	font-size: var(--font-ui-small);
+}
+.idea-triage-bubble-user {
+	align-self: flex-end;
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+}
+.idea-triage-bubble-assistant {
+	align-self: flex-start;
+	background: var(--background-secondary);
+}
+.idea-triage-bubble-pill {
+	align-self: center;
+	background: color-mix(in srgb, var(--color-green) 20%, transparent);
+	font-size: var(--font-ui-smaller);
+	border-radius: 12px;
+}
+.idea-triage-bubble-warn {
+	align-self: center;
+	background: color-mix(in srgb, var(--color-yellow) 25%, transparent);
+	font-size: var(--font-ui-smaller);
+	border-radius: 12px;
+}
+.idea-triage-chat-input-row {
+	display: flex;
+	gap: 6px;
+	align-items: flex-end;
+}
+.idea-triage-chat-input-row textarea {
+	flex: 1;
+	resize: vertical;
+	font-size: var(--font-ui-small);
+}
+.idea-triage-send-btn {
+	height: 34px;
+}

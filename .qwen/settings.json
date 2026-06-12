@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "computer_use__list_apps",
+      "Bash(npm run *)"
+    ]
+  },
+  "$version": 4
+}
